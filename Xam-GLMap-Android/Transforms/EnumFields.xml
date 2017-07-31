@@ -11,4 +11,11 @@
     <field jni-name="Fragment_tag" clr-name="Tag" value="2" />
   </mapping>
   -->
+
+  <!--<mapping jni-class="com/glmapview/GLMapView$GLMapTileState" clr-enum-type="GLMapView.GLMapView.GLMapTileState">
+    <field jni-name="Loaded" clr-name="NoData" value="0" />
+    <field jni-name="NoData" clr-name="Loaded" value="1" />
+    <field jni-name="Unknown" clr-name="Unknown" value="2" />
+  </mapping>-->
+
 </enum-field-mappings>
