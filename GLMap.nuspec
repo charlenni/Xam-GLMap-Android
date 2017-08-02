@@ -7,7 +7,7 @@
         <authors>Dirk Weltz</authors>
         <owners></owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <title>GLMap for Xamarin.Android</title>
+        <title>GLMap for Android</title>
         <summary>Xamarin Binding Library - GLMap for Android</summary>
         <description>Xamarin Binding Library for GLMap for Android. For more informations about GLMap see www.getyourmap.com.</description>
         <iconUrl>https://avatars0.githubusercontent.com/u/600935</iconUrl>
@@ -20,6 +20,6 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="Xam-GLMap-Android/bin/Release/Xam-GLMap-Android.dll" target="lib/MonoAndroid10/Xam-GLMap-Android.dll" />
+        <file src="Xam-GLMap-Android/bin/Release/GLMap.Android.dll" target="lib/MonoAndroid10/GLMap.Android.dll" />
     </files>
 </package>
