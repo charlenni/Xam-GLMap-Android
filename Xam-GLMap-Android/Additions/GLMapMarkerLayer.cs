@@ -6,9 +6,9 @@ namespace GLMap
 {
     public partial class GLMapMarkerLayer
     {
-        public void Modify(Java.Lang.Object[] markers, ICollection<Java.Lang.Object> p1, ICollection<Java.Lang.Object> p2, bool p3, Action action)
+        public void Modify(Java.Lang.Object[] newMarkers, ICollection<Java.Lang.Object> markersToRemove, ICollection<Java.Lang.Object> markersToReload, bool animated, Action complete)
         {
-            modify(markers, p1, p2, p3, new Runnable(action));
+            modify(newMarkers, markersToRemove, markersToReload, animated, new Runnable(complete));
         }
     }
 }

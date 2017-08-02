@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <!-- Required elements-->
+        <id>GLMap.Android</id>
+        <version>0.8.12.1</version>
+        <authors>Dirk Weltz</authors>
+        <owners></owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <title>GLMap for Xamarin.Android</title>
+        <summary>Xamarin Binding Library - GLMap for Android</summary>
+        <description>Xamarin Binding Library for GLMap for Android. For more informations about GLMap see www.getyourmap.com.</description>
+        <iconUrl>https://avatars0.githubusercontent.com/u/600935</iconUrl>
+        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/charlenni/Xam-GLMap-Android</projectUrl>
+        <copyright>Copyright (c) 2017 Dirk Weltz</copyright>
+        <tags>Xamarin.Android, GLMap</tags>
+        <dependencies>
+            <dependency id="Xamarin.Android.Support.v4" version="25.3.1" />
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="Xam-GLMap-Android/bin/Release/Xam-GLMap-Android.dll" target="lib/MonoAndroid10/Xam-GLMap-Android.dll" />
+    </files>
+</package>

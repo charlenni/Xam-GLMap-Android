@@ -81,9 +81,9 @@
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLNativeObject']" name="visibility">public</attr>
   <attr path="/api/package[@name='com.glmapview']/class[@name='SVG']" name="visibility">public</attr>
 
-  <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p0']" name="managedName">geoPoint</attr>
+  <!--<attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p0']" name="managedName">geoPoint</attr>
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p1']" name="managedName">zoom</attr>
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p2']" name="managedName">duration</attr>
-  <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p3']" name="managedName">velocity</attr>
+  <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p3']" name="managedName">velocity</attr> -->
 
 </metadata>

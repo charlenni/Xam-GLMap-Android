@@ -36,19 +36,19 @@ namespace GLMap
             setScaleRulerStyle(GLMap.GLMapView.GLUnits.Values()[(int)units], GLMap.GLMapView.GLMapPlacement.Values()[(int)placement], paddings, maxWidth);
         }
 
-        public void SetMapDidMoveCallback(Action action)
+        public void SetMapDidMoveCallback(Action callback)
         {
-            setMapDidMoveCallback(new Runnable(action));
+            setMapDidMoveCallback(new Runnable(callback));
         }
 
-        public void SetCenterTileStateChangedCallback(Action action)
+        public void SetCenterTileStateChangedCallback(Action callback)
         {
-            setCenterTileStateChangedCallback(new Runnable(action));
+            setCenterTileStateChangedCallback(new Runnable(callback));
         }
 
-        public void DoWhenSurfaceCreated(Action action)
+        public void DoWhenSurfaceCreated(Action callback)
         {
-            doWhenSurfaceCreated(new Runnable(action));
+            doWhenSurfaceCreated(new Runnable(callback));
         }
     }
 }
