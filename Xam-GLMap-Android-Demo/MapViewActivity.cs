@@ -237,7 +237,7 @@ namespace Xam_GLMap_Android_Demo
                     }
                 case Samples.IMAGE_MULTI:
                     mapView.LongClickable = true;
-
+                    
                     gestureDetector = new GestureDetector(this, new SimpleOnGestureListenerAnonymousInnerClassHelper3(this));
 
                     mapView.SetOnTouchListener(new TouchListener(gestureDetector));

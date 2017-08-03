@@ -7,36 +7,12 @@
   <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
   -->
 
-  <!--  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapView']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='BuildConfig']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapBBox']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapDownloadTask']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapImage']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapImageGroup']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapImageGroupCallback']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapInfo']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapLocalSettings']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapManager']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapMarkerImage']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapMarkerLayer']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapMarkerStyleCollection']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapMarkerStyleCollectionDataCallback']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapRasterTileSource']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapTrack']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapTrackData']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapVectorCascadeStyle']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapVectorObject']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapVectorObjectList']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLMapVectorStyle']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLSearchCategories']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLSearchCategory']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='GLSearchOffline']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='ImageManager']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='MapGeoPoint']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='MapPoint']" />
-  <remove-node path="/api/package[@name='com.glmapview']/class[@name='ProgressCallback']" />
--->
+  <!-- Change managed names -->
   <attr path="/api/package[@name='com.glmapview']" name="managedName">GLMap</attr>
+  
+  <!-- Change normal names, because of conflicts with C# conventions -->
+  <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapVectorObject']/method[@name='getType']" name="name">getObjectType</attr>
+  <!--<attr path="/api/package[@name='com.glmapview']/class[@name='GLNativeObject.Type']" name="name">ObjectType</attr>-->
 
   <!-- Replace callback is Runnable with callback is Action -->
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='setMapDidMoveCallback']" name="managedName">setMapDidMoveCallback</attr>
@@ -47,10 +23,6 @@
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='doWhenSurfaceCreated']" name="visibility">internal</attr>
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapMarkerLayer']/method[@name='modify']" name="managedName">modify</attr>
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapMarkerLayer']/method[@name='modify']" name="visibility">internal</attr>
-
-  <!-- Remove Handle from interfaces 
-  <remove-node path="/api/package[@name='com.glmapview']/interface[@name='GLMapImageGroupCallback']/property[@name='handle']" />
-  <remove-node path="/api/package[@name='com.glmapview']/interface[@name='GLMapImageGroupCallback']/method[@name='dispose']" />-->
 
   <!-- Add missing properties -->
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='getRasterTileSources']" name="managedName">getRasterTileSources</attr>
@@ -77,13 +49,12 @@
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapManager']/method[@name='getMapDownloadTasks']" name="managedName">getMapDownloadTasks</attr>
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapManager']/method[@name='getMapDownloadTasks']" name="visibility">internal</attr>
 
-
+  <!-- Change visibility for classes -->
   <attr path="/api/package[@name='com.glmapview']/class[@name='GLNativeObject']" name="visibility">public</attr>
   <attr path="/api/package[@name='com.glmapview']/class[@name='SVG']" name="visibility">public</attr>
 
-  <!--<attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p0']" name="managedName">geoPoint</attr>
-  <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p1']" name="managedName">zoom</attr>
-  <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p2']" name="managedName">duration</attr>
-  <attr path="/api/package[@name='com.glmapview']/class[@name='GLMapView']/method[@name='flyTo']/parameter[@name='p3']" name="managedName">velocity</attr> -->
+  <!-- Change parameter names, which are not replaced by JavaDoc -->
+  <attr path="/api/package[@name='com.glmapview']/class[@name='GLSearchOffline']/method[@name='start']/parameter[@name='p0']" name="managedName">customObjects</attr>
+  <attr path="/api/package[@name='com.glmapview']/class[@name='GLSearchOffline']/method[@name='start']/parameter[@name='p1']" name="managedName">callback</attr>
 
 </metadata>
